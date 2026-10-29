@@ -67,6 +67,9 @@ h1 em { color:var(--site-secondary); font-weight:400; }
 .product:nth-child(2) .product-visual { background:linear-gradient(145deg,#42312d,#1c1720 72%); }
 .product:nth-child(3) .product-visual { background:linear-gradient(145deg,#3c3546,#17151e 72%); }
 .product-visual img { width:100%; height:100%; object-fit:cover; transition:transform .6s; }
+.product-thumbnails { display:flex; gap:7px; padding:7px 0 0; overflow-x:auto; }
+.product-thumbnails button { flex:0 0 56px; width:56px; height:56px; padding:0; background:#17121f; border:1px solid #c8a66a55; }
+.product-thumbnails img { width:100%; height:100%; object-fit:cover; }
 .product:hover .product-visual img { transform:scale(1.045); }
 .product-visual .number { position:absolute; left:17px; top:17px; font-size:9px; letter-spacing:.15em; color:#f5e8cf; }
 .product-visual .view { position:absolute; right:14px; bottom:14px; background:#120f19d9; border:1px solid #c8a66a70; padding:10px 12px; font-size:9px; letter-spacing:.1em; }
@@ -233,4 +236,5 @@ document.getElementById('closeModal').addEventListener('click', closeModal);
 modal.addEventListener('click', e => { if(e.target === modal) closeModal(); });
 document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
 </script>
+<script src="./site-config.js"></script><script src="./sync.js"></script>
 </body></html>
